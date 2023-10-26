@@ -1,7 +1,14 @@
 :root {}
-body{
 
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
 }
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
 .switch {
     position: relative;
     display: inline-block;
@@ -68,4 +75,9 @@ nav{
     border-bottom: 1px solid black;
     gap:2rem;
     padding-bottom: 2rem;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
