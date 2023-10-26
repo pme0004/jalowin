@@ -5,7 +5,7 @@ html {
     font-size: 62.5%; 
 }
 .contenedor {
-    max-width: 120rem;
+  width: 120rem;
     margin: 0 auto;
 }
 
@@ -76,8 +76,14 @@ nav{
     gap:2rem;
     padding-bottom: 2rem;
 }
-.grid {
+.contenedor {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
+.producto{
+
+    border: 1px solid black;
+}
+.grid{
+  
