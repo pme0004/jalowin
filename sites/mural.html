@@ -17,13 +17,121 @@
             <a href="recetas.html">Recetas</a>
             <a href="tienda.html">Tienda</a>
             <a href="mural.html">Mural</a>
-        <div>
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-            </label>
-        </div>
+            <div>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
     </nav>
+    <h1>Las mejores decoraciones de halloween</h1>
+
+    <div class="post">
+        <div class="post_imagen">
+            <img src="img/post1.jpg" alt="Imagen del post">
+        </div>
+        <div class="post_informacion"> 
+            <h4 class="nombre_casa">Casa 1</h4>
+            <p class="nombre_dueño">Nombre del dueño:
+                <span class="dueño_info">Pablo</span>
+            </p>
+            <p class="post_label">Año:
+                <span class="post_info">2020</span>
+            </p>
+            <p class="post_descripcion">
+                Donec tempor, nisl et rhoncus viverra, turpis enim convallis ligula, non hendrerit nulla tortor nec
+                odio. Morbi non mattis nunc, elementum auctor arcu. Aliquam vestibulum arcu non sem porta auctor. Nam
+                vel congue ligula, eu condimentum felis. Nunc aliquam hendrerit odio sit amet venenatis. Nunc varius,
+                libero a tempor rutrum, nulla risus congue velit, nec suscipit nibh lectus ac dolor. Nulla facilisi.
+            </p>
+        </div> <!--.post-informacion-->
+    </div> <!--.post -->
+
+    <div class="post">
+        <div class="post_imagen">
+            <img src="img/post2.jpg" alt="Imagen del post">
+        </div>
+        <div class="post_informacion">
+            <h4 class="nombre_casa">Casa 2</h4>
+            <p class="nombre_dueño">Nombre del dueño
+                <span class="dueño_info">Fernando</span>
+            </p>
+            <p class="año_casa">Año:
+                <span class="año_dueño">2021</span>
+            </p>
+            <p class="post_descripcion">
+                Donec tempor, nisl et rhoncus viverra, turpis enim convallis ligula, non hendrerit nulla tortor nec
+                odio. Morbi non mattis nunc, elementum auctor arcu. Aliquam vestibulum arcu non sem porta auctor. Nam
+                vel congue ligula, eu condimentum felis. Nunc aliquam hendrerit odio sit amet venenatis. Nunc varius,
+                libero a tempor rutrum, nulla risus congue velit, nec suscipit nibh lectus ac dolor. Nulla facilisi.
+            </p>
+        </div> <!--.post-informacion-->
+    </div> <!--.post -->
+
+    <div class="post">
+        <div class="post_imagen">
+            <img src="img/post2.jpg" alt="Imagen del post">
+        </div>
+        <div class="post_informacion">
+            <h4 class="nombre_casa">Casa 2</h4>
+            <p class="nombre_dueño">Nombre del dueño
+                <span class="dueño_info">Fernando</span>
+            </p>
+            <p class="año_casa">Año:
+                <span class="año_dueño">2021</span>
+            </p>
+            <p class="post_descripcion">
+                Donec tempor, nisl et rhoncus viverra, turpis enim convallis ligula, non hendrerit nulla tortor nec
+                odio. Morbi non mattis nunc, elementum auctor arcu. Aliquam vestibulum arcu non sem porta auctor. Nam
+                vel congue ligula, eu condimentum felis. Nunc aliquam hendrerit odio sit amet venenatis. Nunc varius,
+                libero a tempor rutrum, nulla risus congue velit, nec suscipit nibh lectus ac dolor. Nulla facilisi.
+            </p>
+        </div> <!--.post-informacion-->
+    </div> <!--.post -->
+
+    <aside class="formulario">
+        <h4>¡Añade tu casa a nuestro sitio!</h4>
+        <ul>
+            <li><label for="imagen">Selecciona tu imagen</label>
+            <input type="file" id="imagen" name="imagen" accept="image/*"></li>
+            <li><label for="nombre">Como te llamas?</label><input type="text" id="nombre_usuario" placeholder="Tu nombre"></li>
+            <li><label for="año">De que año es tu casa?</label><input type="text" placeholder="año"></li>
+            <li><label for="mensaje">Mensaje</label><input type="text" placeholder="Escribe una descripcion de tu casa"></li>
+            
+        </ul>
+    </aside>
+
+
+
+
+
+    <form id="formulario">
+        
+        
+        <br>
+        <img id="imagenMostrada" src="#" alt="Imagen seleccionada"
+            style="display:none; max-width: 300px; margin-top: 10px;">
+    </form>
+
+    <script>
+        const inputImagen = document.getElementById('imagen');
+        const imagenMostrada = document.getElementById('imagenMostrada');
+
+        inputImagen.addEventListener('change', function () {
+            const archivo = inputImagen.files[0];
+            const lector = new FileReader();
+
+            lector.onload = function (e) {
+                imagenMostrada.src = e.target.result;
+                imagenMostrada.style.display = 'block';
+            };
+
+            lector.readAsDataURL(archivo);
+        });
+    </script>
+</body>
+<script src="../script.js"></script>
+
 </body>
 
 </html>
